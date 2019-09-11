@@ -1,7 +1,7 @@
 package task11;
 
 import static org.junit.Assert.assertTrue;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 class PrimeNumberMethodTest {
 	@Test

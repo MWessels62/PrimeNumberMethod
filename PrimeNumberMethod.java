@@ -5,11 +5,12 @@ import java.util.Scanner;
 public class PrimeNumberMethod {
 	
 	//default value, will change to false if value is found to be divisible by anything other than 1 or itself
-	boolean prime = true;
+	
 	
 	//Determines whether or not a number is prime 
 	public boolean isPrime(int inputNum) {
-		for (int i = 2; i < inputNum && i < 10; i++ ){
+		boolean prime = true;
+		for (int i = 2; i < inputNum && i < inputNum/2; i++ ){
 			if (inputNum % i == 0) {
 				prime = false; 
 			}
@@ -22,10 +23,11 @@ public class PrimeNumberMethod {
 		
 		//Get integer from user
 		Scanner input = new Scanner(System.in);
-		int userInput = 1;
+		int userInput = -1;
 		
 		while (userInput != 0) {
 			System.out.println("\nType in an integer to check if it is prime... (Zero/0 to exit): ");
+			
 			userInput = input.nextInt(); 
 
 			//Determine output string
